@@ -1,0 +1,118 @@
+@import "styles/style.scss";
+
+$card-width: 250px;
+
+.c-ticket {
+  position: relative;
+  width: $card-width;
+
+  &__qrcode {
+    transition: all $global-transition ease-in-out;
+    position: absolute;
+    top: -$global-spacing-unit-small;
+    right: -$global-spacing-unit-small;
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+    padding: 3px;
+    z-index: 2;
+    background-color: white;
+    box-shadow: $shadow-level-1;
+
+    &-image {
+      width: 100%;
+    }
+  }
+
+  &__actions {
+    width: 100%;
+    margin-top: $global-spacing-unit-small;
+    transition: all $global-transition ease-in-out;
+
+    > Button {
+      margin-bottom: $global-spacing-unit-small;
+    }
+
+    &-visible-only-for-me {
+      margin-top: $global-spacing-unit-small;
+      display: flex;
+      align-items: center;
+
+      &-icon {
+        margin-left: $global-spacing-unit-tiny;
+      }
+    }
+  }
+}
+
+.c-expanded-event {
+  width: $card-width;
+
+  &__image {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: $shadow-level-1;
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 10px;
+  }
+
+  &__name {
+    margin: $global-spacing-unit-tiny 0;
+    text-align: center;
+  }
+
+  &__container {
+    display: flex;
+    margin-top: $global-spacing-unit-small;
+
+    &-calendar {
+      background: $color-brand-primary-light;
+      border-radius: $border-radius-xxs;
+      width: 45px;
+      height: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: $global-spacing-unit-small;
+
+      &-month {
+        margin-bottom: $global-spacing-unit-tiny;
+        color: $color-brand-secondary-medium;
+      }
+
+      &-day {
+        margin-bottom: 0;
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    &-wrapper {
+      // $card-width
+      width: calc(250px - 57px);
+
+      &-title {
+        margin-bottom: 3px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &-address {
+        display: flex;
+        align-items: center;
+        color: $color-neutral-dark;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &-icon {
+          margin-right: $global-spacing-unit-tiny;
+        }
+      }
+    }
+  }
+}

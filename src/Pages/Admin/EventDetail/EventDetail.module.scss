@@ -1,0 +1,40 @@
+@import "styles/style.scss";
+
+.c-admin-event-detail {
+  margin-bottom: calc($global-spacing-unit-huge * 2);
+
+  &__header {
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $global-spacing-unit-small 0;
+
+    &-title {
+      flex: 2;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    &-action {
+      flex: 1;
+    }
+  }
+
+  &__form {
+    &-tickets {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: $global-spacing-unit-medium;
+
+      &-add {
+        align-self: flex-end;
+        justify-self: flex-end;
+        width: 30%;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "styles/style.scss";
+
+.c-collapsed-event {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-right: $global-spacing-unit-small;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: $shadow-level-1;
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 14px;
+  }
+
+  &__wrapper {
+    &-date {
+      margin-bottom: $global-spacing-unit-tiny;
+      color: $color-brand-tertiary-medium;
+    }
+
+    &-title {
+      margin-bottom: $global-spacing-unit-tiny;
+    }
+
+    &-address {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      color: $color-neutral-dark;
+
+      &-icon {
+        margin-right: $global-spacing-unit-tiny;
+      }
+    }
+  }
+}

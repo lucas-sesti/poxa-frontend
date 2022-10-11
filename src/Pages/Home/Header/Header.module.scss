@@ -1,0 +1,30 @@
+@import "styles/style.scss";
+
+.c-header {
+  width: 100%;
+  height: $header-height;
+  background: url("/assets/background/home.png") no-repeat;
+  background-size: cover;
+  position: relative;
+
+  @include mq($from: tablet-landscape) {
+    height: 250px;
+    border-bottom-left-radius: 80px;
+    background: url("/assets/background/home-desktop.png") no-repeat;
+  }
+
+  &__login {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 100%;
+    padding: $global-spacing-unit-tiny;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: $global-spacing-unit-small;
+    top: $global-spacing-unit-small;
+    cursor: pointer;
+  }
+}

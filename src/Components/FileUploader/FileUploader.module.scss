@@ -1,0 +1,87 @@
+@import "styles/style.scss";
+
+.c-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 250px;
+  border: 1px dashed $color-neutral-medium;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: $global-spacing-unit-medium;
+
+  &__background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: transparent;
+    transition: all $global-transition ease-in-out;
+  }
+
+  &:hover {
+    .c-upload__label-icon,
+    .c-upload__label-text {
+      color: $color-brand-primary-medium !important;
+    }
+  }
+
+  &--has-image {
+    &:hover {
+      .c-upload__background {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--has-image {
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      background: white;
+      top: $global-spacing-unit-small;
+      left: unset;
+      right: $global-spacing-unit-small;
+      box-shadow: $shadow-level-2;
+      justify-content: center;
+      transform: unset;
+    }
+
+    &-text {
+      font-size: $font-size-xxs;
+      color: $color-neutral-medium;
+      margin-bottom: 0;
+      margin-left: $global-spacing-unit-tiny;
+    }
+  }
+
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &__preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

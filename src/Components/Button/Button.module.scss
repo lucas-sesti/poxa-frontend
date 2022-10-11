@@ -1,0 +1,16 @@
+@import "styles/style.scss";
+
+.c-button {
+  width: 100%;
+  background: $color-brand-primary-medium;
+  border-radius: $border-radius-md;
+  text-align: center;
+  padding: $global-spacing-unit-small;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 0px 9px 1px rgba(155, 100, 253, 0.41);
+  cursor: pointer;
+  font-size: $font-size-xxs;
+}

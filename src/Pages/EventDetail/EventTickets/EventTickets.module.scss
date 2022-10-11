@@ -1,0 +1,30 @@
+@import "styles/style.scss";
+
+.c-event-tickets {
+  margin-top: $global-spacing-unit-medium;
+
+  &__title {
+    font-size: $font-size-sm;
+    margin-bottom: 18px;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @include mq($from: tablet-landscape) {
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    margin-bottom: $global-spacing-unit-medium;
+    margin-right: 0;
+
+    @include mq($from: tablet-landscape) {
+      flex-direction: row;
+      margin-right: $global-spacing-unit-medium;
+    }
+  }
+}

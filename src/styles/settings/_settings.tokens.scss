@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
+
+/** =================== TIPOGRAFIA =================== **/
+
+// font-family
+$global-headings-font: Ubuntu, georgia, "Times New Roman", serif;
+$global-body-font: Quicksand, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// font-size
+$global-font-size: 16px;
+
+$font-size-xxxs: 12px;
+$font-size-xxs: 14px;
+$font-size-xs: 16px;
+$font-size-sm: 20px;
+$font-size-md: 24px;
+$font-size-lg: 32px;
+$font-size-xl: 40px;
+$font-size-xxl: 48px;
+$font-size-xxxl: 64px;
+$font-size-display: 80px;
+
+// font-weight
+$font-weight-hairline: 100;
+$font-weight-light: 200;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+// line-height
+
+$font-height-near: 100%;
+$font-height-compact: 120% !default;
+$font-height-far: 140%;
+$font-height-further: 180%;
+
+/** =================== CORES =================== **/
+
+// brand colors
+$color-brand-primary-dark: #0036f6;
+$color-brand-primary-medium: #9b64fd;
+$color-brand-primary-light: #f1eaf8;
+
+$color-brand-secondary-medium: #f37272;
+
+$color-brand-tertiary-medium: #ffaa46;
+
+// neutral colors
+$color-neutral-darkest: #404040;
+$color-neutral-dark: #777777;
+$color-neutral-medium: #bababa;
+$color-neutral-light: #e0e0e0;
+$color-neutral-lightest: #ffffff;
+
+// feedback colors
+$color-feedback-success-medium: #6dca8b;
+$color-feedback-warning-medium: #ffb854;
+$color-feedback-error-medium: #e84155;
+
+/** =================== SOMBRAS =================== **/
+
+// box-shadow
+$shadow-level-1: 0px 0 6px rgba(71, 38, 38, 0.31);
+
+$shadow-level-2: 0px 64px 64px rgba(60, 60, 60, 0.05),
+  0px 32px 32px rgba(60, 60, 60, 0.05), 0px 16px 16px rgba(60, 60, 60, 0.05),
+  0px 8px 8px rgba(60, 60, 60, 0.05), 0px 4px 4px rgba(60, 60, 60, 0.05),
+  0px 2px 2px rgba(60, 60, 60, 0.05);
+
+/** =================== BORDAS =================== **/
+
+// border radius
+$border-radius-xxs: 5px;
+$border-radius-xs: 10px;
+$border-radius-sm: 20px;
+$border-radius-md: 30px;
+$border-radius-lg: 40px;
+$border-radius-pill: 50%;
+
+// border widths
+$border-width-hairline: 1px;
+$border-width-thin: 2px;
+
+/** =================== ESPACAMENTOS =================== **/
+
+$global-baseline: 6px;
+
+$global-spacing-unit-tiny: $global-baseline;
+$global-spacing-unit-small: $global-baseline * 2;
+$global-spacing-unit-medium: $global-baseline * 4;
+
+$global-spacing-unit-large: $global-baseline * 8;
+$global-spacing-unit-huge: $global-baseline * 12;
+$global-spacing-unit: $global-spacing-unit-medium;
+
+/** =================== GRADIENTES =================== **/
+
+/** =================== OUTROS =================== **/
+
+$global-transition: 0.3s;
+
+// Opacity
+
+$opacity-level-semiopaque: 50%;
+$opacity-level-medium: 30%;
+$opacity-level-light: 10%;
+
+/** ================= HeaderLogin Height ================= **/
+
+$header-height: 208px;

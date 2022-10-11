@@ -1,0 +1,21 @@
+@import "styles/style.scss";
+
+.c-header-login {
+  width: 45px;
+  height: 45px;
+  background: white;
+  border-radius: 100%;
+  padding: $global-spacing-unit-tiny;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: $global-spacing-unit-small;
+  top: $global-spacing-unit-small;
+  cursor: pointer;
+
+  @include mq($from: tablet-landscape) {
+    right: $global-spacing-unit-medium;
+    top: $global-spacing-unit-large;
+  }
+}

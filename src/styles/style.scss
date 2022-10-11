@@ -1,0 +1,10 @@
+@import "./utilities/utilities.scss";
+@import "./settings/settings.scss";
+@import "./elements/elements.scss";
+@import "./mq/mq.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

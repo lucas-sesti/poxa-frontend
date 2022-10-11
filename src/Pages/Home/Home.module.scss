@@ -1,0 +1,11 @@
+@import "styles/style.scss";
+
+.c-home {
+  position: relative;
+
+  &__wrapper {
+    position: absolute;
+    top: calc($header-height - 90px);
+    width: 100%;
+  }
+}

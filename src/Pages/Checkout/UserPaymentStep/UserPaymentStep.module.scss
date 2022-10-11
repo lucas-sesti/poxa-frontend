@@ -1,0 +1,9 @@
+@import "styles/style.scss";
+
+.c-user-payment-step {
+  padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+
+  &__title {
+    font-size: $font-size-sm;
+  }
+}

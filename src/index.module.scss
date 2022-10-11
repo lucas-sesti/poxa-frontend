@@ -1,0 +1,34 @@
+@import "styles/style.scss";
+
+.c-index {
+  &__whatsapp {
+    z-index: 3;
+    width: 72px;
+    height: 72px;
+    position: fixed;
+    bottom: 36px;
+    right: 36px;
+    background: #fff;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+    box-shadow: $shadow-level-1;
+    transition: all $global-transition ease-in-out;
+
+    &:hover {
+      background: $color-feedback-success-medium;
+
+      .c-index__whatsapp-icon {
+        color: #ffffff;
+      }
+    }
+
+    &-icon {
+      color: $color-feedback-success-medium;
+      transition: all $global-transition ease-in-out;
+    }
+  }
+}

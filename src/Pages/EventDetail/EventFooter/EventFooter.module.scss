@@ -1,0 +1,36 @@
+@import "styles/style.scss";
+
+.c-event-footer {
+  background: white;
+  padding: 18px $global-spacing-unit-small;
+  box-shadow: $shadow-level-1;
+  border-top-left-radius: $border-radius-sm;
+  border-top-right-radius: $border-radius-sm;
+  display: flex;
+  align-items: center;
+
+  @include mq($from: tablet-landscape) {
+    padding: 18px $global-spacing-unit-large;
+  }
+
+  &__amount {
+    flex: 1;
+
+    &-title {
+      margin-bottom: $global-spacing-unit-tiny;
+      font-size: $font-size-xxs;
+      color: $color-neutral-medium;
+    }
+
+    &-total {
+      margin-bottom: 0;
+      color: $color-brand-primary-medium;
+      font-weight: $font-weight-bold;
+      font-size: $font-size-xs;
+    }
+  }
+
+  &__action {
+    flex: 1;
+  }
+}

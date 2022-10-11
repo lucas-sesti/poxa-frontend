@@ -1,0 +1,63 @@
+@import "styles/style.scss";
+
+.c-checkout {
+  &__stepper {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &-theme {
+      &--default {
+        color: $color-brand-primary-medium;
+        border-color: $color-brand-primary-medium;
+        background-color: white;
+        border-radius: 100%;
+        z-index: 1;
+      }
+
+      &--active {
+        color: white;
+        border-color: $color-brand-primary-medium;
+        background-color: $color-brand-primary-medium;
+        border-radius: 100%;
+        z-index: 1;
+      }
+    }
+
+    &-line {
+      position: absolute;
+      width: calc(100% - 12px);
+      height: 1px;
+      left: $global-spacing-unit-tiny;
+      background-color: $color-brand-primary-medium;
+    }
+
+    &--steps {
+      padding: 0 $global-spacing-unit-tiny;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-step {
+      width: 30px;
+      height: 30px;
+      border-width: $border-width-thin;
+      border-style: solid;
+      border-color: inherit;
+      background-color: inherit;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-title {
+        margin-bottom: 0;
+        color: inherit;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-xxs;
+      }
+    }
+  }
+}

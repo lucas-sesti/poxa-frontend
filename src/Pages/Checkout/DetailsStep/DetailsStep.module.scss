@@ -1,0 +1,54 @@
+@import "styles/style.scss";
+
+.c-details-step {
+  padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+
+  &__title {
+    font-size: $font-size-sm;
+
+    &:last-of-type {
+      margin-top: $global-spacing-unit-medium;
+    }
+  }
+
+  &__details {
+    &-users {
+      margin-bottom: 18px;
+
+      &-ticket {
+        margin-top: $global-spacing-unit-small;
+        margin-bottom: $global-spacing-unit-tiny;
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: $border-width-thin dotted $color-neutral-light;
+      padding: $global-spacing-unit-tiny 0;
+
+      &--users {
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
+
+      &-title {
+        margin-bottom: 0;
+        font-size: $font-size-xxs;
+      }
+
+      &-value {
+        margin-bottom: 0;
+        font-size: $font-size-xxs;
+        font-weight: $font-weight-bold;
+
+        &-price {
+          color: $color-brand-primary-medium;
+        }
+      }
+    }
+  }
+}

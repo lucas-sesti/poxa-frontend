@@ -1,0 +1,36 @@
+@import "styles/style.scss";
+
+.c-header {
+  width: 100%;
+  height: $header-height;
+  background: url("/assets/event/event.png") $color-brand-primary-medium
+    no-repeat center;
+  background-size: cover;
+  position: relative;
+  border-bottom-left-radius: 45px;
+
+  @include mq($from: tablet-landscape) {
+    height: 450px;
+    border-bottom-left-radius: 0;
+  }
+
+  &__back {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 100%;
+    padding: $global-spacing-unit-tiny;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: $global-spacing-unit-small;
+    top: $global-spacing-unit-small;
+    cursor: pointer;
+
+    @include mq($from: tablet-landscape) {
+      left: $global-spacing-unit-medium;
+      top: $global-spacing-unit-large;
+    }
+  }
+}

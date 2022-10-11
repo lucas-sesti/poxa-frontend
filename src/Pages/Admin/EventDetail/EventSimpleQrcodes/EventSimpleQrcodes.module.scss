@@ -1,0 +1,27 @@
+@import "styles/style.scss";
+
+.c-event-qrcodes {
+  margin-bottom: $global-spacing-unit-medium;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $global-spacing-unit-small 0;
+    margin-top: $global-spacing-unit-large;
+    margin-bottom: $global-spacing-unit-small;
+
+    &-title {
+      flex: 2;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    &-action {
+      flex: 1;
+    }
+  }
+
+  &__title {
+  }
+}

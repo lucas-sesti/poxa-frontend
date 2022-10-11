@@ -1,0 +1,21 @@
+@import "styles/style.scss";
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.c-loading-spinner {
+  &__item {
+    width: $global-spacing-unit-medium;
+    height: $global-spacing-unit-medium;
+    border: 3px solid $color-neutral-light;
+    border-top: 3px solid $color-brand-primary-medium;
+    border-radius: 50%;
+    animation: spinner 1.5s linear infinite;
+  }
+}

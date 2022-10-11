@@ -1,0 +1,11 @@
+@import "../settings/settings";
+
+@for $i from 1 through 16 {
+  .u-mb-#{i} {
+    margin-bottom: 6px;
+  }
+}
+
+.u-mt-2 {
+  margin-top: 12px;
+}

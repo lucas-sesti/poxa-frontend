@@ -1,0 +1,28 @@
+@import "styles/style.scss";
+
+.c-calendar-date {
+  background: $color-brand-primary-light;
+  border-radius: $border-radius-xxs;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: $global-spacing-unit-small;
+
+  @include mq($from: tablet-landscape) {
+    width: 60px;
+    height: 60px;
+  }
+
+  &__month {
+    margin-bottom: $global-spacing-unit-tiny;
+    color: $color-brand-secondary-medium;
+  }
+
+  &__day {
+    margin-bottom: 0;
+    font-weight: $font-weight-bold;
+  }
+}

@@ -1,0 +1,19 @@
+@import "styles/style.scss";
+
+.c-event-date {
+  display: flex;
+  align-items: center;
+
+  &__information {
+    &-weekday {
+      font-size: $font-size-xxs;
+      font-weight: $font-weight-bold;
+      margin-bottom: $global-spacing-unit-tiny;
+    }
+
+    &-hour {
+      color: $color-neutral-dark;
+      margin-bottom: 0;
+    }
+  }
+}

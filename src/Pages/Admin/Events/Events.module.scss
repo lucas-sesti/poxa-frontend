@@ -1,0 +1,48 @@
+@import "styles/style.scss";
+
+.c-events {
+  width: 100%;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-action {
+      max-width: 200px;
+      width: 100%;
+      margin-right: $global-spacing-unit-medium;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: $global-spacing-unit-medium;
+    grid-template-areas: ". . . .";
+
+    &-item {
+      justify-self: center;
+      align-self: center;
+      border: $border-width-thin solid transparent;
+      cursor: pointer;
+      transition: all $global-transition ease-in-out;
+      position: relative;
+
+      > p {
+        text-align: center;
+      }
+
+      &--cover {
+        position: absolute;
+        left: -6px;
+        right: -6px;
+        top: -6px;
+        bottom: -6px;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: $border-radius-xs;
+      }
+    }
+  }
+}

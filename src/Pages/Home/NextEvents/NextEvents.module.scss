@@ -1,0 +1,38 @@
+@import "styles/style.scss";
+
+.c-next-events {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  padding: $global-spacing-unit-small $global-spacing-unit-small
+    $global-spacing-unit-small $global-spacing-unit-small;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #929292;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+  @include mq($from: tablet-landscape) {
+    padding: $global-spacing-unit-medium $global-spacing-unit-large
+      $global-spacing-unit-small $global-spacing-unit-large;
+  }
+
+  &__item {
+    margin-right: $global-spacing-unit-medium;
+    cursor: pointer;
+    color: $color-neutral-darkest;
+
+    &:hover {
+      color: $color-neutral-darkest;
+    }
+  }
+}

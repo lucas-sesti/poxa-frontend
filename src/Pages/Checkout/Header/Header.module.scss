@@ -1,0 +1,16 @@
+@import "styles/style.scss";
+
+.c-header {
+  display: flex;
+  align-items: center;
+  margin: $global-spacing-unit-medium $global-spacing-unit-tiny 18px
+    $global-spacing-unit-tiny;
+  cursor: pointer;
+
+  &__title {
+    margin-bottom: 0;
+    font-family: $global-headings-font;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xs;
+  }
+}

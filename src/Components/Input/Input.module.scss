@@ -1,0 +1,36 @@
+@import "styles/style.scss";
+
+.c-input {
+  width: 100%;
+  position: relative;
+  margin: $global-spacing-unit-small 0;
+
+  &__label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: $global-spacing-unit-small;
+    transition: all $global-transition ease-in-out;
+    padding: 3px;
+    margin-bottom: 0;
+
+    &--top {
+      top: 0;
+      transform: translateY(-50%);
+      background: white;
+    }
+  }
+
+  &__field {
+    outline: none;
+    width: 100%;
+    border: $border-width-thin solid #d2d2d2;
+    border-radius: 6px;
+    padding: $global-spacing-unit-small;
+    transition: all $global-transition ease-in-out;
+
+    &--focused {
+      border: $border-width-thin solid #7c7c7c;
+    }
+  }
+}

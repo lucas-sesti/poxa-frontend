@@ -1,0 +1,35 @@
+@import "styles/style.scss";
+
+.c-event-detail {
+  &__wrapper {
+    padding: 0 $global-spacing-unit-small;
+
+    @include mq($from: tablet-landscape) {
+      padding: 0 $global-spacing-unit-large;
+    }
+
+    &-information {
+      margin: 18px 0;
+
+      &-title {
+        font-size: $font-size-sm;
+        margin-bottom: 18px;
+      }
+
+      &-description {
+        font-size: $font-size-xs;
+      }
+    }
+
+    &-address {
+      margin-bottom: $global-spacing-unit-huge * 1.5;
+    }
+  }
+
+  &__footer {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+}

@@ -1,0 +1,46 @@
+@import "styles/style.scss";
+
+.c-events {
+  padding: 0 $global-spacing-unit-small;
+  margin-top: $global-spacing-unit-medium;
+
+  @include mq($from: tablet-landscape) {
+    padding: 0 $global-spacing-unit-large;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-search {
+      cursor: pointer;
+      position: relative;
+
+      &-icon {
+        position: absolute;
+        right: $global-spacing-unit-small;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__wrapper {
+    &-events {
+      margin-top: 18px;
+
+      &-item {
+        margin-bottom: 18px;
+
+        &-link {
+          color: $color-neutral-darkest;
+
+          &:hover {
+            color: $color-neutral-darkest;
+          }
+        }
+      }
+    }
+  }
+}

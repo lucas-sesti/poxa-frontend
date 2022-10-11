@@ -1,0 +1,35 @@
+@import "styles/style.scss";
+
+.c-editor {
+  border: $border-width-thin solid $color-neutral-medium;
+  border-radius: 6px;
+  margin-bottom: $global-spacing-unit-medium;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding: 8px 8px 4px 8px;
+    border-bottom: $border-width-thin solid $color-neutral-light;
+
+    &-item {
+      transition: all $global-transition ease-in-out;
+      border-radius: 3px;
+      cursor: pointer;
+      border-right: $border-width-thin solid $color-neutral-light;
+      padding-right: $global-spacing-unit-tiny;
+      margin-right: $global-spacing-unit-tiny;
+
+      &:last-of-type {
+        border: none;
+      }
+
+      &:hover {
+        background-color: $color-neutral-light;
+      }
+    }
+  }
+
+  &__editor {
+    padding: 8px;
+  }
+}

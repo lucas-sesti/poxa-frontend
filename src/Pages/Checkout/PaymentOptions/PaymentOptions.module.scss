@@ -1,0 +1,59 @@
+@import "styles/style.scss";
+
+.c-payment-options {
+  padding: $global-spacing-unit-tiny $global-spacing-unit-small;
+  margin-bottom: $global-spacing-unit-medium;
+
+  &__caption {
+    margin-bottom: 18px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding: $global-spacing-unit-small;
+    box-shadow: $shadow-level-1;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border $global-transition ease-in-out;
+    border: $border-width-thin solid transparent;
+
+    &--selected {
+      border: $border-width-thin solid $color-brand-primary-medium;
+    }
+
+    &:first-of-type {
+      margin-right: 30px;
+    }
+
+    &-image {
+      &--credit-card {
+        width: 78px;
+        height: 48px;
+      }
+
+      &--pix {
+        width: 52px;
+        height: 52px;
+      }
+
+      margin-bottom: $global-spacing-unit-small;
+    }
+
+    &-title {
+      margin-bottom: 0;
+      font-family: $global-headings-font;
+      font-size: $font-size-xxs;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
