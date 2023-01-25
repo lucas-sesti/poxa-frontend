@@ -292,7 +292,7 @@ export default function AdminEventDetail() {
                             }}
                           >
                             {Object.entries(TicketType)
-                              .slice(3)
+                              .slice(4)
                               .map(([key, value]) => {
                                 return (
                                   <option key={key} value={value}>

@@ -16,6 +16,7 @@ export enum TicketType {
   BOX,
   PREMIUM_BOX,
   TRACK,
+  TWO_BOX
 }
 
 export interface SelectedTickets {

@@ -8,6 +8,8 @@ export function translateTicketType(value: string | TicketType): string {
       return "Pista Premium";
     case 2:
       return "Camarote";
+    case 3:
+      return "Dois pistas"
     default:
       return "Desconhecido";
   }
