@@ -1,11 +1,14 @@
 import styles from "./EventPayment.module.scss";
-import { Payment } from "../../../../models/payment";
+import {Payment} from "../../../../models/payment";
 import {
   currencyFormatter,
   currencyFormatterWithoutPrefix,
 } from "../../../../utils/currency";
 import React from "react";
-import { addCpfMask } from "../../../../utils/masks/cpf.mask";
+import {addCpfMask} from "../../../../utils/masks/cpf.mask";
+import {useSelector} from "react-redux";
+import {selectUser} from "../../../../store/user/user.slice";
+import {User} from "../../../../models/user";
 
 const CurrencyFormat = require("react-currency-format");
 
@@ -13,7 +16,9 @@ interface Props {
   payments: Payment[];
 }
 
-export default function EventPayments({ payments }: Props) {
+export default function EventPayments({payments}: Props) {
+  const user: User = useSelector(selectUser);
+
   const getPaymentStatus = (value) => {
     value = value.toUpperCase();
 
@@ -43,7 +48,7 @@ export default function EventPayments({ payments }: Props) {
   };
   return (
     <div className={styles["c-event-payments"]}>
-      {payments && payments.length > 0 && (
+      {payments && payments.length > 0 && user && user.id === '87fc1fc0-d060-4611-abc0-4e22a0a51407' && (
         <>
           <h2 className={styles["c-event-payments__title"]}>Pagamentos</h2>
           <p>
@@ -63,44 +68,45 @@ export default function EventPayments({ payments }: Props) {
             />
           </p>
 
+
           <table className={styles["c-event-payments__table"]}>
             <thead>
-              <tr>
-                <th>ID</th>
-                <th>ID Externo</th>
-                <th>Total</th>
-                <th>Status</th>
-                <th>Método de pagamento</th>
-                <th>Email do comprador</th>
-                <th>Nome do comprador</th>
-                <th>CPF do comprador</th>
-              </tr>
+            <tr>
+              <th>ID</th>
+              <th>ID Externo</th>
+              <th>Total</th>
+              <th>Status</th>
+              <th>Método de pagamento</th>
+              <th>Email do comprador</th>
+              <th>Nome do comprador</th>
+              <th>CPF do comprador</th>
+            </tr>
             </thead>
             <tbody>
-              {payments.slice(0, 55).map((payment) => {
-                return (
-                  <tr key={payment.id}>
-                    <td>{payment.id}</td>
-                    <td>{payment.externalId}</td>
-                    <td>
-                      <CurrencyFormat
-                        className={styles["c-event-ticket__amount-price"]}
-                        value={payment.total}
-                        format={currencyFormatter}
-                        thousandSeparator="."
-                        decimalSeparator=","
-                        displayType={"text"}
-                        prefix={""}
-                      />
-                    </td>
-                    <td>{getPaymentStatus(payment.paymentStatus ?? "")}</td>
-                    <td>{getPaymentMethod(payment.paymentMethod ?? "")}</td>
-                    <td>{payment.buyer?.email}</td>
-                    <td>{payment.buyer?.full_name}</td>
-                    <td>{addCpfMask(payment.buyer?.cpf)}</td>
-                  </tr>
-                );
-              })}
+            {payments.slice(0, 55).map((payment) => {
+              return (
+                <tr key={payment.id}>
+                  <td>{payment.id}</td>
+                  <td>{payment.externalId}</td>
+                  <td>
+                    <CurrencyFormat
+                      className={styles["c-event-ticket__amount-price"]}
+                      value={payment.total}
+                      format={currencyFormatter}
+                      thousandSeparator="."
+                      decimalSeparator=","
+                      displayType={"text"}
+                      prefix={""}
+                    />
+                  </td>
+                  <td>{getPaymentStatus(payment.paymentStatus ?? "")}</td>
+                  <td>{getPaymentMethod(payment.paymentMethod ?? "")}</td>
+                  <td>{payment.buyer?.email}</td>
+                  <td>{payment.buyer?.full_name}</td>
+                  <td>{addCpfMask(payment.buyer?.cpf)}</td>
+                </tr>
+              );
+            })}
             </tbody>
           </table>
         </>
