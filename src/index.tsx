@@ -31,7 +31,7 @@ root.render(
       <div
         onClick={() => {
           window.open(
-            "https://api.whatsapp.com/send/?phone=5511914313468&text=Ol%C3%A1%2C+estou+com+d%C3%BAvidas+em+rela%C3%A7%C3%A3o+ao+evento+rol%C3%AA+do+poxa+e+gostaria+de+mais+informa%C3%A7%C3%B5es+dos+ingressos.&type=phone_number&app_absent=0",
+            "https://wa.me/message/YZRHDLUCEERKF1",
             "_blank"
           );
         }}
